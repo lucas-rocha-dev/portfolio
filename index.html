@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himitsu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <meta name="description"
+        content="Desenvolvedor Android Júnior em busca de oportunidades. Conheça meus projetos e habilidades.">
+    <meta name="keywords" content="desenvolvedor, android, kotlin, jetpack, firebase">
+
+    <div class="container">
+
+        <table>
+            <tr>
+                <td class="img-left">
+
+                    <img src="images/ninja android.png" alt="">
+
+                </td>
+
+                <td class="infos">
+                    <h1>Olá, sou Himitsu!</h1>
+                    <p>Seu ninja desenvolvedor Android Júnior</p>
+                    <p>Crio aplicativos Android utilizando as <br>melhores técnicas de programação:</p>
+                    <ul>
+                        <li>Kotlin, linguagem para desenvolvimento nativo Android</li>
+                        <li>Jetpack Compose, moldo interfaces modernas como <br>um verdadeiro mestre das artes visuais
+                        </li>
+                        <li>ViewModel, detentor de estado, trazendo vida à tela e<br> lógica de negócios</li>
+                        <li>Navigation, deslocamento entre telas com a velocidade <br>e precisão de um ninja</li>
+                        <li>Firebase, banco de dados não relacional confiavel e <br>eficiente</li>
+                        <li>AdMob, monetização de forma segura</li>
+                        <li>Python, para automações e Webscrapping</li>
+                    </ul>
+
+                    <p>Aplicativos publicados na PlayStore:</p>
+
+                    <table class="tabela-google">
+                        <tr>
+
+                            <td>
+                                <a class="links"
+                                    href="https://play.google.com/store/apps/details?id=soloboss.nwsoloboss"
+                                    target="_blank">Solo Boss - NW</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img class="expansivel" src="images/nwboss1.webp" alt="">
+                                        </td>
+                                        <td>
+                                            <img class="expansivel" src="images/nwboss2.webp" alt="">
+                                        </td>
+                                        <td>
+                                            <img class="expansivel" src="images/nwboss3.webp" alt="">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td>
+                                <a class="links" href="https://play.google.com/store/apps/details?id=com.futebolplacar"
+                                    target="_blank">Futebol Placar</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img class="expansivel" src="images/futplacar1.png" alt="">
+                                        </td>
+                                        <td>
+                                            <img class="expansivel" src="images/futplacar2.png" alt="">
+                                        </td>
+                                        <td>
+                                            <img class="expansivel" src="images/futplacar3.png" alt="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <button class="meu-botao">Saiba mais detalhes</button>
+
+                    <div class="all_contatos">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a href="https://twitter.com/HimitsuCoder" target="_blank">
+                                        <img src="images/twitter.png" alt="Descrição da Imagem">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="https://www.linkedin.com/in/lucas-rodrigues-da-rocha-98b3372a1/"
+                                        target="_blank">
+                                        <img src="images/linkdin.png" alt="Descrição da Imagem">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="https://github.com/HimitsuDev" target="_blank">
+                                        <img src="images/github.png" alt="">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="mailto:himitsudeveloper@gmail.com" target="_blank">
+                                        <img src="images/icon_email.png" alt="">
+                                    </a>
+                                </td>
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    <script>
+        // Declare a constante fora do escopo da função
+        const imagensExpansiveis = document.querySelectorAll('.expansivel');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            imagensExpansiveis.forEach(imagem => {
+                imagem.addEventListener('click', () => {
+                    imagem.classList.toggle('expandida');
+                });
+            });
+        });
+
+        document.body.addEventListener('click', (event) => {
+            if (!event.target.classList.contains('expansivel') && !event.target.closest('.expansivel')) {
+                imagensExpansiveis.forEach(imagem => {
+                    imagem.classList.remove('expandida');
+                });
+            }
+        });
+
+        const botao = document.querySelector('.meu-botao');
+
+        botao.addEventListener('click', () => {
+            // Define o URL da página a ser carregada
+            window.location.href = 'detalhes.html';
+        });
+
+    </script>
+
+
+</body>
+
+</html>
