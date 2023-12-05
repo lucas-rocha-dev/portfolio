@@ -1,102 +1,74 @@
-html {
-    height: 100%;
-}
 
 body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    align-items:center;
-    background-image: linear-gradient(rgb(38, 210, 104), rgb(38, 238, 198));
+    background: radial-gradient(to right, #cce8ee, #09546f);
+    background-size: 200% 100%; /* Tamanho inicial do gradiente */
+    animation: gradientAnimation 3s alternate; /* Alterna a direção a cada ciclo */
+   
+}
+.saudacao {
+    -webkit-text-stroke: 1px #cce8ee; /* Adicionar um contorno branco ao texto */
+    color: #000000; 
+    font-size: 3em;
+    text-align: center; /* Centralizar o texto */
+    margin-top: 50px; /* Adicionar espaço superior */
+    margin-bottom: 20px; /* Adicionar espaço inferior */
+    font-family: 'Arial', sans-serif; /* Escolher uma fonte apropriada */
+    font-weight: bold; /* Adicionar negrito para ênfase */
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 100% 0; /* Gradiente à direita no início */
+    }
+    100% {
+        background-position: 0 0; /* Gradiente à esquerda no final */
+    }
 }
 
-
-
-.img-left img {
-    max-width: 90%;
-    height: auto;
-    min-width: 300px;
-    flex-shrink: 0;
-        }
-
-.infos {
-    padding-top: 10px;
-    background-image: linear-gradient(to right, rgb(9, 20, 5), rgb(17, 56, 6));
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-    margin-bottom: 3px;
-}
-
-.infos h1 {
-    text-align: left;
-    padding-top: 3px;
-    font-size: 4rem; 
-    font-weight: 1000;
-    font-family: 'Courier New', Courier, monospace;
-    word-wrap: break-word;
-    line-height: 1;
-    margin-bottom: 3px;
-    letter-spacing: 1px; 
-}
-
-.infos p {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0px;
-    font-weight: 1000;
-    font-size: 30px;
-    word-wrap: break-word;
-    line-height: 0.8;
-    margin-bottom: 2px;
-    word-break: break-all;
-    margin-top: 0.5em;
-}
-
-.infos ul {
-    list-style-type: disc;
-    font-family: sans-serif;
-    font-size: 25px;
-    word-wrap: break-word;
+.meus_dados {
     padding-left: 20px;
-    padding-right: 0px;
-    line-height: 1;
-    margin-bottom: 2px;
-    margin-top: 0.5em;
+    max-width: 20%;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+    
+   
 }
 
-.infos li {
-    color: black;
-     list-style-type:none;
-    font-family: sans-serif;
-    font-size: 25px;
-    word-wrap: break-word;
-    background-image: url(shuriken.png);
-    background-size: 20px 20px;
-    background-repeat: no-repeat; 
-    padding-left: 30px; 
+.segunda_coluna {
+    margin-left: 20px;
+    box-shadow: -30px 0 15px rgba(0, 0, 0, 0.1);
+    padding-left: 50px;
+    margin-right: 50px;
+}
+.perfil{
+    align-items: flex-start;
+}
+tr {
+    display: flex; 
+}
+.foto_perfil {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 40%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(11, 0, 0, 0.548);
+}
+
+.perfil{
+    font-size:3cap;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+.all_contatos img {
+    max-width: 50px;
+    padding-top: 20px;
     margin-bottom: 10px;
 }
 
 
-.infos img {
-    max-width: 10%;
-    height: auto;
-    flex-shrink: 0;
-    min-width: 20px;
-    margin-right: 10px;
-    max-width: 50px;
-    flex-shrink: 0;
-}
-
-.tabela-google{
-    padding: 0px;
-    align-items: start;
-    word-wrap: break-word;
-}
 
 .expansivel {
     cursor: pointer;
@@ -107,38 +79,86 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: scale(8);
+    transform: scale(3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 }
 
-.meu-botao {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #081b08; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-}
-
-.meu-botao:hover {
-    background-color: #083808;
-}
-.links {
-    font-size: 1.5em;
-}
-
-.all_contatos {
-    padding-top: 3cap;
-    top: 100%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alinha os itens à direita */
-}
-
-.all_contatos img {
+.img_projetos img {
+    max-width: 10%;
+    flex-shrink: 0;
+    min-width: 100px;
+    margin-right: 10px;
     max-width: 50px;
-    margin-bottom: 10px; /* Adiciona um espaço entre as imagens */
+    flex-shrink: 0;
 }
+
+.text_meuTrabalho {
+    font-family: 'Arial', sans-serif;
+    font-size: 3cap;
+}
+.title_projetos {
+    font-size: 3cap;
+    color: black;
+
+
+}
+.descricao_projeto {
+    font-size: 2cap;
+    font-family: 'Roboto', sans-serif;
+    
+
+
+}
+.div_projetos {
+    padding-top: 10px;
+}
+.habilidades {
+    font-size: 1cap;
+   
+    
+}
+.img_google {
+    padding-left: 30px;
+    min-width: 100px;
+    max-width: 150px;
+
+}
+.historia {
+    display: none;
+    font-size: 1.2em; /* Tamanho da fonte ajustado */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* Altura da linha ajustada para melhor legibilidade */
+    color: #333; /* Cor do texto mais escura */
+    text-align: justify; /* Texto justificado */
+    margin-top: 20px; /* Adiciona espaço superior */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adiciona sombra à fonte */
+}
+.mostrar-btn {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+#mostrar-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px; /* Adiciona preenchimento ao botão */
+    background-color: #3498db; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none; /* Remove sublinhado do link */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    transition: background-color 0.3s ease; /* Adiciona transição suave de cor de fundo */
+}
+
+#mostrar-btn:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+}
+
+
+.nome-desenvolvedor {
+    padding-bottom: 50px; /* Adiciona espaçamento abaixo do elemento */
+  }
+  
+  .title_habilidades {
+    margin-top: 50px; /* Adiciona espaçamento acima do elemento */
+  }
