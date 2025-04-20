@@ -12,7 +12,7 @@ body {
     text-align: center; /* Centralizar o texto */
     margin-top: 50px; /* Adicionar espaço superior */
     margin-bottom: 20px; /* Adicionar espaço inferior */
-    font-family: 'Arial', sans-serif; /* Escolher uma fonte apropriada */
+    font-family: 'Consolas'; /* Escolher uma fonte apropriada */
     font-weight: bold; /* Adicionar negrito para ênfase */
 }
 @keyframes gradientAnimation {
@@ -94,29 +94,26 @@ tr {
 }
 
 .text_meuTrabalho {
-    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-family: 'Consolas';
     font-size: 3cap;
 }
 .title_projetos {
+    font-family: 'Consolas';
     font-size: 3cap;
     color: black;
-
-
 }
 .descricao_projeto {
+    font-family: 'Consolas';
     font-size: 2cap;
     font-family: 'Roboto', sans-serif;
-    
-
-
 }
 .div_projetos {
     padding-top: 10px;
 }
 .habilidades {
-    font-size: 1cap;
-   
-    
+    font-family: 'Consolas';
+    font-size: 0.8cap;
 }
 .img_google {
     padding-left: 30px;
@@ -131,6 +128,12 @@ tr {
     max-width: 50px;
     max-height: 50px;
 
+}
+.img_projetos_git {
+    padding-left: 10px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
 }
 .historia {
     display: none;
