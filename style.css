@@ -29,14 +29,15 @@ body {
     max-width: 20%;
     display: flex;
     align-items: flex-start;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Consolas';
     
    
 }
 
+
 .segunda_coluna {
     margin-left: 50px;
-    box-shadow: -30px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: -60px 0 15px rgba(0, 0, 0, 0.1);
     padding-left: 50px;
     margin-right: 50px;
 }
@@ -104,7 +105,6 @@ tr {
     color: black;
 }
 .descricao_projeto {
-    font-family: 'Consolas';
     font-size: 2cap;
     font-family: 'Roboto', sans-serif;
 }
@@ -134,7 +134,16 @@ tr {
     min-width: 50px;
     max-width: 50px;
     max-height: 50px;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    text-align: center; /* Centraliza o texto */
 }
+.links_github {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    text-align: center; /* Centraliza o texto */
+}
+
 .historia {
     display: none;
     font-size: 1.2em; /* Tamanho da fonte ajustado */
@@ -142,7 +151,7 @@ tr {
     line-height: 1.6; /* Altura da linha ajustada para melhor legibilidade */
     color: #333; /* Cor do texto mais escura */
     text-align: justify; /* Texto justificado */
-    margin-top: 20px; /* Adiciona espaço superior */
+    margin-top: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adiciona sombra à fonte */
 }
 .mostrar-btn {
@@ -155,7 +164,7 @@ tr {
     display: inline-block;
     padding: 10px 20px; /* Adiciona preenchimento ao botão */
     background-color: #3498db; /* Cor de fundo azul */
-    color: #fff; /* Cor do texto branco */
+    color: #fff;
     text-decoration: none; /* Remove sublinhado do link */
     border-radius: 5px; /* Adiciona cantos arredondados */
     transition: background-color 0.3s ease; /* Adiciona transição suave de cor de fundo */
@@ -177,3 +186,8 @@ tr {
   .email {
     font-size: 20px;
   }
+
+.local {
+    font-family: 'Consolas' !important;
+    font-size: 1cap !important;
+}
