@@ -74,11 +74,12 @@ tr {
 .expansivel {
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
+
 }
 .expandida {
     display: block;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: scale(3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -144,10 +145,14 @@ tr {
     text-align: center; /* Centraliza o texto */
 }
 .img_certificacao_microsoft {
+    display: flex !important;
     padding-left: 10px;
-    min-width: 200px;
+    min-width: 100px;
+    min-height: 100px;
     max-width: 500px;
     max-height: 500px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
 }
 
 .celula_com_borda {
