@@ -143,6 +143,17 @@ tr {
     margin: 0 auto; /* Centraliza a imagem */
     text-align: center; /* Centraliza o texto */
 }
+.img_certificacao_microsoft {
+    padding-left: 10px;
+    min-width: 200px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.celula_com_borda {
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
 
 .historia {
     display: none;

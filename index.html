@@ -94,9 +94,9 @@
                 <b class=" descricao_projeto">
                     <br><br> • APIs no github : <br>
                 </b>
-                <table>
+                <table class="tabela_projetos_git">
                     <tr>
-                        <td>
+                        <td class="celula_com_borda">
                             --► API de cadastrao de livros e usuarios, assim como
                             <br>
                             consultas, edição e exclusão,usando ASP.NET e SQL.
@@ -118,15 +118,17 @@
                             </a>
                         </td>
                     </tr>
-
-
                 </table>
+                <h2> <strong> Tenho certificação Microsoft:</strong> </h2>
+
+                <img class="img_certificacao_microsoft" src="images/certificacao_microsoft.png" alt=""/>
+                
 
 
                 <h2> <strong> Minha experiencia desenvolvendo aplicativos mobile:</strong> </h2>
                 <div class="div_projetos">
 
-                    <b class="title_projetos">Futebol Placar</b> <a target="_blank">
+                    <b class="title_projetos">Futebol Placar</b> <a>
                         <img class="img_google" src="images/play_logo.webp" alt="">
                     </a>
                     <table class="img_projetos">
@@ -169,7 +171,7 @@
                     Introduzi banners e anúncios intersticiais usando AdMob, focando sempre em usar boas
                     práticas.
                 </b> <br>
-                
+
                 <div class="div_projetos">
                     <b class="title_projetos">Solo Boss - NW</b>
                     <a>
@@ -312,8 +314,9 @@
     </table>
 
     <script>
-        // Declare a constante fora do escopo da função
-        const imagensExpansiveis = document.querySelectorAll('.expansivel');
+       
+        const imagensExpansiveis = document.querySelectorAll('.expansivel', );
+        
 
         document.addEventListener('DOMContentLoaded', function () {
             imagensExpansiveis.forEach(imagem => {
@@ -330,6 +333,27 @@
                 });
             }
         });
+
+        //divisao certificado microsoft
+        const imagensExpansiveisCertificado = document.querySelectorAll('.img_certificacao_microsoft',);
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            imagensExpansiveisCertificado.forEach(imagem => {
+                imagem.addEventListener('click', () => {
+                    imagem.classList.toggle('expandida');
+                });
+            });
+        });
+
+        document.body.addEventListener('click', (event) => {
+            if (!event.target.classList.contains('img_certificacao_microsoft') && !event.target.closest('.img_certificacao_microsoft')) {
+                imagensExpansiveisCertificado.forEach(imagem => {
+                    imagem.classList.remove('expandida');
+                });
+            }
+        });
+        //divisao
 
 
         function toggleHistoria() {
