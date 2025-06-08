@@ -46,7 +46,7 @@
                         <a href="https://www.linkedin.com/in/lucasrochadeveloper/" target="_blank">
                             <img src="images/linkdin.png" alt="Descrição da Imagem">
                         </a>
-                        <a href="https://github.com/HimitsuDev" target="_blank">
+                        <a href="https://github.com/lucas-rocha-dev" target="_blank">
                             <img src="images/github.png" alt="">
                         </a>
                         <a href="mailto:lucas_luri@hotmail.com" target="_blank">
@@ -117,11 +117,11 @@
 
             <h2> <strong> Profissional com Certificação Microsoft:</strong> </h2>
             <div class="certificacoes-wrapper">
-                <img class="img_certificacao_microsoft" src="images/certificacao_microsoft.png" alt="Certificação Microsoft" />
+                <img class="img_certificacao" src="images/certificacao_microsoft.png" alt="Certificação Microsoft" />
                 <div class="certificacoes-adicionais">
-                    <img class="img_certificacao_microsoft" src="images/img_certificacao_mercado_trabalho.jpg" alt="Certificado Mercado de Trabalho" />
-                    <img class="img_certificacao_microsoft" src="images/img_certificacao_csharp_completo.png" alt="Certificado CSharp Completo" />
-                    <img class="img_certificacao_microsoft" src="images/img_certificado_android.png" alt="Certificado Android" />
+                    <img class="img_certificacao" src="images/img_certificacao_mercado_trabalho.jpg" alt="Certificado Mercado de Trabalho" />
+                    <img class="img_certificacao" src="images/img_certificacao_csharp_completo.png" alt="Certificado CSharp Completo" />
+                    <img class="img_certificacao" src="images/img_certificado_android.png" alt="Certificado Android" />
                 </div>
             </div>
 
@@ -131,10 +131,10 @@
                     <img class="img_google" src="images/play_logo.webp" alt="">
                 </a>
                 <div class="img_projetos-grid">
-                    <img class="expansivel" src="images/futplacar1.png" alt="">
-                    <img class="expansivel" src="images/futplacar2.png" alt="">
-                    <img class="expansivel" src="images/futplacar3.png" alt="">
-                    <img class="expansivel" src="images/futplacar4.webp" alt="">
+                    <img class="expansivel" src="images/futplacar1.png" alt="imagem do projeto">
+                    <img class="expansivel" src="images/futplacar2.png" alt="imagem do projeto">
+                    <img class="expansivel" src="images/futplacar3.png" alt="imagem do projeto">
+                    <img class="expansivel" src="images/futplacar4.webp" alt="imagem do projeto">
                 </div>
                 <b class="descricao_projeto">
                     Aplicativo Android que fornece ao usuário informações dos principais
@@ -236,66 +236,40 @@
     </div>
 
     <script>
-        const imagensExpansiveis = document.querySelectorAll('.expansivel');
-
-        document.addEventListener('DOMContentLoaded', function () {
-            imagensExpansiveis.forEach(imagem => {
-                imagem.addEventListener('click', () => {
-                    imagem.classList.toggle('expandida');
-                });
-            });
-        });
-
-        document.body.addEventListener('click', (event) => {
-            if (!event.target.classList.contains('expansivel') && !event.target.closest('.expansivel')) {
-                imagensExpansiveis.forEach(imagem => {
-                    imagem.classList.remove('expandida');
-                });
-            }
-        });
-
-        const imagensExpansiveisCertificado = document.querySelectorAll('.img_certificacao_microsoft');
-
-        document.addEventListener('DOMContentLoaded', function () {
-            imagensExpansiveisCertificado.forEach(imagem => {
-                imagem.addEventListener('click', () => {
-                    imagem.classList.toggle('expandida');
-                });
-            });
-        });
-
-        document.body.addEventListener('click', (event) => {
-            if (!event.target.classList.contains('img_certificacao_microsoft') && !event.target.closest('.img_certificacao_microsoft')) {
-                imagensExpansiveisCertificado.forEach(imagem => {
-                    imagem.classList.remove('expandida');
-                });
-            }
-        });
-
         function toggleHistoria() {
             var historia = document.querySelector('.historia');
             historia.style.display = (historia.style.display === 'none' || historia.style.display === '') ? 'block' : 'none';
         }
     </script>
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.expansivel').forEach(function(img) {
-        img.addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.querySelectorAll('.expansivel.expandida').forEach(function(openImg) {
-                openImg.classList.remove('expandida');
-            });
-            if (!img.classList.contains('expandida')) {
-                img.classList.add('expandida');
-            }
-        });
-    });
-    document.body.addEventListener('click', function () {
-        document.querySelectorAll('.expansivel.expandida').forEach(function(img) {
-            img.classList.remove('expandida');
-        });
+document.querySelectorAll('.img_certificacao').forEach(function(img) {
+    img.addEventListener('click', function (e) {
+        // Se já está ampliada, fecha
+        if (img.classList.contains('ampliada')) {
+            fecharCertificacaoAmpliada();
+            return;
+        }
+        fecharCertificacaoAmpliada();
+        // Cria overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay-certificacao';
+        overlay.addEventListener('click', fecharCertificacaoAmpliada);
+        document.body.appendChild(overlay);
+        // Ampliar imagem
+        img.classList.add('ampliada');
+        img.style.pointerEvents = 'auto';
+        img.addEventListener('click', fecharCertificacaoAmpliada);
     });
 });
+function fecharCertificacaoAmpliada() {
+    document.querySelectorAll('.img_certificacao.ampliada').forEach(function(img) {
+        img.classList.remove('ampliada');
+        img.style.pointerEvents = '';
+    });
+    document.querySelectorAll('.overlay-certificacao').forEach(function(ov) {
+        ov.parentNode.removeChild(ov);
+    });
+}
 </script>
 </body>
 
