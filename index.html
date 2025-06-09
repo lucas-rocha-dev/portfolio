@@ -259,13 +259,11 @@
     <script>
 document.querySelectorAll('.img_certificacao').forEach(function(img) {
     img.addEventListener('click', function (e) {
-        // Se já está ampliada, fecha
         if (img.classList.contains('ampliada')) {
             fecharCertificacaoAmpliada();
             return;
         }
         fecharCertificacaoAmpliada();
-        // Cria overlay
         const overlay = document.createElement('div');
         overlay.className = 'overlay-certificacao';
         overlay.addEventListener('click', fecharCertificacaoAmpliada);
