@@ -78,7 +78,7 @@ body {
     overflow: hidden;
     box-shadow: 0 0 10px rgba(11, 0, 0, 0.548);
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
 }
 
 .nome-desenvolvedor {
@@ -106,7 +106,7 @@ body {
 }
 
 .all_contatos {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .contatos-row {
@@ -125,11 +125,6 @@ body {
     transform: translateY(-3px);
 }
 
-.email {
-    font-size: 1rem;
-    margin-top: 15px;
-    font-weight: bold;
-}
 
 .text_meuTrabalho {
     text-align: center;

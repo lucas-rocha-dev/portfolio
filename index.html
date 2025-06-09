@@ -16,7 +16,22 @@
     <div class="main-content-wrapper">
         <div class="meus_dados">
             <div class="perfil">
-                <img class="foto_perfil" src="images/lucas_foto_new.jpeg" alt=""> <br>
+                <img class="foto_perfil" src="images/lucas_foto_new.jpeg" alt=""> 
+                <div class="all_contatos">
+                    <div class="contatos-row">
+                        <a href="https://twitter.com/HimitsuCoder" target="_blank">
+                            <img src="images/twitter.png" alt="Descrição da Imagem">
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucasrochadeveloper/" target="_blank">
+                            <img src="images/linkdin.png" alt="Descrição da Imagem">
+                        </a>
+                        <a href="https://github.com/lucas-rocha-dev" target="_blank">
+                            <img src="images/github.png" alt="">
+                        </a>
+                        <a href="mailto:lucas_luri@hotmail.com" target="_blank">
+                            <img src="images/icon_email.png" alt="">
+                        </a>
+                    </div>
                 <div class="nome-desenvolvedor">
                     <b>Lucas Rocha</b>
                     <br>
@@ -38,24 +53,10 @@
                     Download CV
                 </a>
                 <br> <br>
-                <div class="all_contatos">
-                    <div class="contatos-row">
-                        <a href="https://twitter.com/HimitsuCoder" target="_blank">
-                            <img src="images/twitter.png" alt="Descrição da Imagem">
-                        </a>
-                        <a href="https://www.linkedin.com/in/lucasrochadeveloper/" target="_blank">
-                            <img src="images/linkdin.png" alt="Descrição da Imagem">
-                        </a>
-                        <a href="https://github.com/lucas-rocha-dev" target="_blank">
-                            <img src="images/github.png" alt="">
-                        </a>
-                        <a href="mailto:lucas_luri@hotmail.com" target="_blank">
-                            <img src="images/icon_email.png" alt="">
-                        </a>
-                    </div>
+                
                 </div>
                 <br>
-                <b class="email">lucas_luri@hotmail.com </b>
+            
             </div>
         </div>
 
@@ -78,7 +79,11 @@
             </b>
             <div class="projetos-git-grid">
                 <div class="projeto-item celula_com_borda">
-                    <h3 class="links_github">API Otimização Embalagens .NET</h3>
+                    <h3 class="links_github">
+                        <a href="https://github.com/lucas-rocha-dev/LojaDoSeuManoel" target="_blank">
+                        API Otimização Embalagens .NET
+                        </a>
+                        </h3>
                     <p>API .NET, desenvolvida para automatizar o processo de embalagem de pedidos.</p>
                     <a href="https://github.com/lucas-rocha-dev/LojaDoSeuManoel" target="_blank">
                         <img class="img_projetos_git" src="images/icon_projetos.png" alt="Link para o projeto API Otimização Embalagens .NET">
@@ -87,7 +92,11 @@
                 </div>
 
                 <div class="projeto-item celula_com_borda">
-                    <h3 class="links_github"> API Biblioteca com .NET</h3>
+                    <h3 class="links_github"> 
+                        <a href="https://github.com/lucas-rocha-dev/WebApi8_Biblioteca" target="_blank">
+                            API Biblioteca com .NET
+                        </a>
+                    </h3>
                     <p>API de cadastro de livros e autores, assim como consultas, edições e exclusão usando ASP.NET e SQL.</p>
                     <a href="https://github.com/lucas-rocha-dev/WebApi8_Biblioteca" target="_blank">
                         <img class="img_projetos_git" src="images/icon_projetos.png" alt="Link para o projeto WebApi8_Biblioteca">
@@ -96,7 +105,11 @@
                 </div>
 
                 <div class="projeto-item celula_com_borda">
-                    <h3 class="links_github"> API_100k_users .NET</h3>
+                    <h3 class="links_github"> 
+                        <a href="https://github.com/lucas-rocha-dev/API_100k_users_Desafio_Codecon" target="_blank">
+                            API_100k_users .NET
+                        </a>
+                    </h3>
                     <p>API desenvolvida para o desafio Codecon, focada em alta performance e manipulação de grandes volumes de dados (100mil usuários).</p>
                     <a href="https://github.com/lucas-rocha-dev/API_100k_users_Desafio_Codecon" target="_blank">
                         <img class="img_projetos_git" src="images/icon_projetos.png"
@@ -105,8 +118,10 @@
                     </a>
                 </div>
 
-                <div class="projeto-item"> <h3 class="links_github"> Automação WebScraping em Python</h3>
-                    <p>Automação em Python que realiza WebScraping em sites de esportes,alimentado um banco de dados Firestore.</p>
+                <div class="projeto-item"> <h3 class="links_github"> 
+                   <a href="https://github.com/lucas-rocha-dev/webscraping_futebol" target="_blank"> Automação WebScraping em Python </a>
+                </h3>
+                   <p>Automação em Python que realiza WebScraping em sites de esportes,alimentado um banco de dados Firestore.</p>
                     <a href="https://github.com/lucas-rocha-dev/webscraping_futebol" target="_blank">
                         <img class="img_projetos_git" src="images/icon_projetos.png"
                              alt="Link para o projeto Automação WebScraping em Python">
@@ -244,18 +259,15 @@
     <script>
 document.querySelectorAll('.img_certificacao').forEach(function(img) {
     img.addEventListener('click', function (e) {
-        // Se já está ampliada, fecha
         if (img.classList.contains('ampliada')) {
             fecharCertificacaoAmpliada();
             return;
         }
         fecharCertificacaoAmpliada();
-        // Cria overlay
         const overlay = document.createElement('div');
         overlay.className = 'overlay-certificacao';
         overlay.addEventListener('click', fecharCertificacaoAmpliada);
         document.body.appendChild(overlay);
-        // Ampliar imagem
         img.classList.add('ampliada');
         img.style.pointerEvents = 'auto';
         img.addEventListener('click', fecharCertificacaoAmpliada);
