@@ -259,20 +259,22 @@
     <script>
 document.querySelectorAll('.img_certificacao').forEach(function(img) {
     img.addEventListener('click', function (e) {
+        // Se já está ampliada, fecha
         if (img.classList.contains('ampliada')) {
             fecharCertificacaoAmpliada();
             return;
         }
         fecharCertificacaoAmpliada();
+        // Cria overlay
         const overlay = document.createElement('div');
         overlay.className = 'overlay-certificacao';
         overlay.addEventListener('click', fecharCertificacaoAmpliada);
         document.body.appendChild(overlay);
         img.classList.add('ampliada');
         img.style.pointerEvents = 'auto';
-        img.addEventListener('click', fecharCertificacaoAmpliada);
     });
 });
+
 function fecharCertificacaoAmpliada() {
     document.querySelectorAll('.img_certificacao.ampliada').forEach(function(img) {
         img.classList.remove('ampliada');
